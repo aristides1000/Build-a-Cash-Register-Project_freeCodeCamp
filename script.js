@@ -13,17 +13,20 @@ let cid = [
 const cash = document.getElementById("cash");
 const changeDue = document.getElementById("change-due");
 const purchaseBtn = document.getElementById("purchase-btn");
-//const moneyCashRegister = cid.reduce((acc, num) => acc + num[1], 0).toFixed(2);
 
 class CashRegister {
   constructor() {
     this.change = 0;
     this.totalInCashRegister = cid.reduce((acc, num) => acc + num[1], 0).toFixed(2);
   }
-}
 
-class Cash {
-  constructor() {
-    this.payment = 0;
+  update() {
+    /* this.change = this.totalInCashRegister - price;
+    this.totalInCashRegister = this.change; */
+    console.log("hola mundo");
   }
 }
+
+const cashRegister = new CashRegister();
+
+purchaseBtn.addEventListener("click", cashRegister.update());
