@@ -20,13 +20,30 @@ class CashRegister {
     this.totalInCashRegister = cid.reduce((acc, num) => acc + num[1], 0).toFixed(2);
   }
 
+  checkChange(amount) {
+    console.log(amount < price);
+    console.log(true < 1.87);
+    console.log("amount: ", amount);
+    console.log("price: ", price);
+
+    if (cash.value < price) {
+      alert ("Customer does not have enough money to purchase the item");
+      return;
+    }
+
+    if (Number(cash.value) === price) {
+      changeDue.textContent = 'No change due - customer paid with exact cash';
+    }
+  }
+
   update() {
-    /* this.change = this.totalInCashRegister - price;
-    this.totalInCashRegister = this.change; */
-    console.log("hola mundo");
+    this.change = this.totalInCashRegister - cash.value;
+    /* this.totalInCashRegister = this.change; */
+    this.checkChange(this.change);
+    //console.log(this.change);
   }
 }
 
 const cashRegister = new CashRegister();
 
-purchaseBtn.addEventListener("click", cashRegister.update());
+purchaseBtn.addEventListener("click", () => cashRegister.update());
