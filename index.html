@@ -7,10 +7,20 @@
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
+  <div id="change-due-container">
+    <p id="change-due"></p>
+  </div>
   <input type="number" id="cash" />
-  <div id="change-due"></div>
   <button type="button" id="purchase-btn">Purchase</button>
 
+  <p>Total: $<span id="price-element"></span></p>
+
+  <div>
+    <span class="bold">Change in drawer:</span>
+    <div id="cash-drawer">
+
+    </div>
+  </div>
   <script src="./script.js"></script>
 </body>
 </html>

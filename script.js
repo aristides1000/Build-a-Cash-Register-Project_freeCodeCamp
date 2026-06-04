@@ -1,5 +1,5 @@
-let price = 1.87;
-let cid = [
+const price = 19.5;
+const cid = [
   ['PENNY', 1.01],
   ['NICKEL', 2.05],
   ['DIME', 3.1],
@@ -11,8 +11,12 @@ let cid = [
   ['ONE HUNDRED', 100]
 ];
 const cash = document.getElementById("cash");
-const changeDue = document.getElementById("change-due");
-const purchaseBtn = document.getElementById("purchase-btn");
+const changeDue = document.getElementById('change-due');
+const purchaseBtn = document.getElementById('purchase-btn');
+const priceElement = document.getElementById('price-element');
+const cashDrawer = document.getElementById('cash-drawer');
+
+priceElement.textContent = price;
 
 class CashRegister {
   constructor() {
@@ -33,7 +37,16 @@ class CashRegister {
 
     if (Number(cash.value) === price) {
       changeDue.textContent = 'No change due - customer paid with exact cash';
+      return;
     }
+  }
+
+  cashDrawerRender() {
+    cashDrawer.textContent = '';
+
+    cid.forEach(unit => {
+      cashDrawer.innerHTML += `<p>${unit[0]}: $${unit[1]}</p>`;
+    });
   }
 
   update() {
@@ -41,9 +54,13 @@ class CashRegister {
     /* this.totalInCashRegister = this.change; */
     this.checkChange(this.change);
     //console.log(this.change);
+
+    cashDrawerRender();
   }
 }
 
 const cashRegister = new CashRegister();
+
+cashRegister.cashDrawerRender();
 
 purchaseBtn.addEventListener("click", () => cashRegister.update());
