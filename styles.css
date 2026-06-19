@@ -1,7 +1,53 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
 .bold {
   font-weight: bold;
 }
 
-p {
-  margin: 0;
+body {
+  background-color: #0A0A23;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.freecodecamp-logo {
+  width: 21%;
+  margin: 2.5rem auto;
+}
+
+h1 {
+  color: #DFDFE2;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+label{
+  color: #DFDFE2;
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
 }
