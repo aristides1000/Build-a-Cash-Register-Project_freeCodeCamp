@@ -51,3 +51,24 @@ label{
   font-size: 1.15rem;
   margin-bottom: 0.5rem;
 }
+
+input {
+  margin-bottom: 1.1rem;
+}
+
+#cash {
+  /* font-size: 1.2rem; */
+  padding: 0.25rem;
+  width: 18%;
+}
+
+button {
+  border-width: 3px;
+  border-style: solid;
+  border-color: #FEAC32 #AA7321 #AA7321 #FEAC32;
+  background: linear-gradient(#FECB4C, #FFAC33);
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.1rem;
+  padding: 0.15rem 0.4rem;
+}
