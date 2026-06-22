@@ -86,3 +86,92 @@ button {
   padding: 0.9rem 1.2rem;
   margin-right: 9.75rem;
 }
+
+.cash-register-housing {
+  display: flex;
+  background-color: #99C9FF;
+  padding: 1.15rem;
+  border-radius: 2rem 2rem 0 0;
+  margin-bottom: 0.55rem;
+}
+
+.number-1 {
+  grid-area: number-1;
+}
+
+.number-2 {
+  grid-area: number-2;
+}
+
+.number-3 {
+  grid-area: number-3;
+}
+
+.number-4 {
+  grid-area: number-4;
+}
+
+.number-5 {
+  grid-area: number-5;
+}
+
+.number-6 {
+  grid-area: number-6;
+}
+
+.number-7 {
+  grid-area: number-7;
+}
+
+.number-8 {
+  grid-area: number-8;
+}
+
+.number-9 {
+  grid-area: number-9;
+}
+
+.button-numbers {
+  display: grid;
+  grid-template-columns: repeat(3, 0.22rem);
+  grid-template-rows: repeat(3, 0.22rem);
+  gap: 1.29rem;
+  grid-template-areas: "number-7 number-8 number-9"
+                       "number-4 number-5 number-6"
+                       "number-1 number-2 number-3";
+  margin-right: 4rem;
+}
+
+.button-numbers div {
+  background-color: #0A0A23;
+  padding: 0.63rem;
+}
+
+.screen {
+  background-color: white;
+  padding: 0.75rem 1rem 0 0.5rem;
+}
+
+#cash-drawer p {
+  margin: 0.25rem 0 0.05rem 0;
+}
+
+.cash-drawer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99C9FF;
+  height: 3rem;
+  width: 26%;
+}
+
+.lock {
+  background-color: #0A0A23;
+  padding: 0.615rem;
+  border-radius: 50%;
+}
+
+#change-due {
+  color: white;
+  margin-bottom: 0.75rem;
+}
