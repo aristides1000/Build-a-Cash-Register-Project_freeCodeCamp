@@ -1,5 +1,5 @@
-const price = 3.26;
-const cid = [
+let price = 3.26;
+let cid = [
   ['PENNY', 1.01],
   ['NICKEL', 2.05],
   ['DIME', 3.1],
